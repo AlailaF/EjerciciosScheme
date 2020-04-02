@@ -1,0 +1,22 @@
+;13 - Función lenght recursiva
+(define (largo lista)
+  (if (null? lista)
+      0
+      (+ 1 (largo (cdr lista)))))
+
+;14 - Implementar su propia versión de append x1 x2 recursivamente
+(define (unir lista1 lista2)
+  (if (null? lista1) 
+      lista2
+      (cons (car lista1) 
+            (unir (cdr lista1) lista2)
+            )
+      )
+  )
+
+;15 Calcular n factorial
+(define (factorial n)
+  (cond ((null? n) n)
+         (else (* n (- n 1)))
+         )
+  )
